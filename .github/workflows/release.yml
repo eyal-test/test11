@@ -7,7 +7,7 @@ jobs:
     release:
         name: Release version
         runs-on: ubuntu-latest
-        environment:
+        environment: Semantic Release
         steps:
             - name: Checkout
               uses: actions/checkout@v4
