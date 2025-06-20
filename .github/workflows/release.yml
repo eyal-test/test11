@@ -23,11 +23,11 @@ jobs:
             - name: Generate GitHub App Token
               id: github-app-token
               run: |
-                  node .github/scripts/generate-token.js
+                  node .github/scripts/generate-token.cjs
               env:
-                  GITHUB_APP_ID: ${{ env.RELEASES_APP_ID }}
-                  GITHUB_APP_PRIVATE_KEY_BASE64: ${{ secrets.RELEASES_APP_PRIVATE_KEY_BASE64 }}
-                  GITHUB_APP_INSTALLATION_ID: ${{ env.RELEASES_APP_INSTALLATION_ID }}
+                  GITHUB_APP_ID: ${{ env.G_RELEASES_APP_ID }}
+                  GITHUB_APP_PRIVATE_KEY_BASE64: ${{ secrets.G_RELEASES_APP_PRIVATE_KEY_BASE64 }}
+                  GITHUB_APP_INSTALLATION_ID: ${{ env.G_RELEASES_APP_INSTALLATION_ID }}
 
             - name: Semantic Release
               uses: cycjimmy/semantic-release-action@v4
