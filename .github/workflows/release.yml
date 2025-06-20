@@ -30,12 +30,6 @@ jobs:
                   GITHUB_APP_INSTALLATION_ID: ${{ vars.G_RELEASES_APP_INSTALLATION_ID }}
 
             - name: Semantic Release
-              uses: cycjimmy/semantic-release-action@v4
-              with:
-                  extra_plugins: |
-                      @semantic-release/changelog
-                      @semantic-release/commit-analyzer
-                      @semantic-release/git
-                      @semantic-release/npm
+              run: npx semantic-release
               env:
                   GITHUB_TOKEN: ${{ steps.github-app-token.outputs.token }}
