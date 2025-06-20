@@ -64,6 +64,22 @@ const appId = process.env.GITHUB_APP_ID || process.argv[2];
 const privateKeyBase64 = process.env.GITHUB_APP_PRIVATE_KEY_BASE64 || process.argv[3];
 const installationId = process.env.GITHUB_APP_INSTALLATION_ID || process.argv[4];
 
+if(!appId) {
+	console.error(
+		"appId is required. Set GITHUB_APP_ID environment variable or pass as first argument.",
+	);
+}
+if (!privateKeyBase64) {
+    console.error(
+        "privateKeyBase64 is required. Set GITHUB_APP_PRIVATE_KEY_BASE64 environment variable or pass as second argument.",
+    );
+}
+if (!installationId) {
+    console.error(
+        "installationId is required. Set GITHUB_APP_INSTALLATION_ID environment variable or pass as third argument.",
+    );
+}
+
 if (!appId || !privateKeyBase64 || !installationId) {
 	console.error("Usage: node generate-token.js <app-id> <private-key-base64> <installation-id>");
 	console.error(
