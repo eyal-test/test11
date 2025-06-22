@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/eyal-test/test11/compare/v1.1.0...v1.2.0) (2025-06-22)
+
+
+### Features
+
+* **all:** init project ([6189c70](https://github.com/eyal-test/test11/commit/6189c700bff34de8e5af0b7e00e1c760c867a317))
+
 # [1.1.0](https://github.com/eyal-test/test11/compare/v1.0.4...v1.1.0) (2025-06-22)
 
 
